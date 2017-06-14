@@ -8,7 +8,7 @@ This project is showing how we can integrate springboot application with Keycloa
 * Keycloak 3.1.0.Final
 
 ## Pre-requisities
-* Kyecloak Installation
+* Kyecloak Server is up and running
 
 ## Change in application.properties
 ```
@@ -23,5 +23,16 @@ keycloak.bearer-only = true
 keycloak.securityConstraints[1].authRoles[0] = user
 keycloak.securityConstraints[1].securityCollections[0].name = user
 keycloak.securityConstraints[1].securityCollections[0].patterns[0] = /user/*
+
 ```
+## Running application
+run from below from command line
+```
+mvn spring-boot:run
+```
+## Test Application
+* First Create user using "/keycloak/create" rest service. Where pass user details like username,email,password, firstname, lastname etc. 
+* Now by call "/keycloak/token" with user credentials. Server validate it and give response with access_token and refresh_token. 
+* Use access token to access "user/hello" pass it in header as Authorization: bearer <access_token>
+* I am attaching postman json file also.
  
