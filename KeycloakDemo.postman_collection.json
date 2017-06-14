@@ -1,0 +1,102 @@
+{
+	"variables": [],
+	"info": {
+		"name": "KeycloakDemo",
+		"_postman_id": "33421763-cce4-cbf1-a21e-e67f4d9bedf0",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetToken",
+			"request": {
+				"url": "http://127.0.0.1:5555/keycloak/token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"test1\",\n\t\"password\":\"password\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Hello",
+			"request": {
+				"url": "http://127.0.0.1:5555/user/hello",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtMHl5aUdRc0w4THRURmhoTFBTaFNEeUM4WkM1dUVObXRKanZSVHpUVnNrIn0.eyJqdGkiOiIxNmU0ZGI0ZC00MDAwLTQzN2UtODFjOC0xNzFkNDk2MjUxYmYiLCJleHAiOjE0OTc0MjQ4MzQsIm5iZiI6MCwiaWF0IjoxNDk3NDIzMzM0LCJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwODAvYXV0aC9yZWFsbXMvZGVtbyIsImF1ZCI6InNlcnZpY2UiLCJzdWIiOiJjYzJiODFkMi1lNDUwLTQ2ZmEtOGNmOC05ODY1NGRlM2ZkNTciLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJzZXJ2aWNlIiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiYTA5NzgwMDMtMzIwOS00NWI2LTgxZDQtMTk2YTIyYzk5OTU0IiwiYWNyIjoiMSIsImNsaWVudF9zZXNzaW9uIjoiNGIxZTBhODEtMmY5Ni00ZWQwLWI0NTctY2ZiNzYwMGViMzJmIiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sIm5hbWUiOiJha3NoYXkgZ3VwdGEgIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWtzaGF5MTl2aXRAZ21haWwuY29tIiwiZ2l2ZW5fbmFtZSI6ImFrc2hheSBndXB0YSIsImVtYWlsIjoiYWtzaGF5MTl2aXRAZ21haWwuY29tIn0.P14QTGfVHKB_UJ1sffwNmhsf4Arx8Tq5USjU9meyxxyGxztMUjCqjsxD6_uvSB3R7SJDYnXyaxQfUOz9Rs5igs7UXcytJzt6SimqJnGVlvhDWQasyg3ZsYAQBXRpunZiCh4EoQug11HlQAdl_bNfG0DkrVRFlwTsD1TmrKqpfwW3ushefqeZDQd5nAdbjoQcqDld2AcLBs0aZygNXGX0EpVcyzOtpjITy66V6c0xcC35u-_PjMCyFS9id3kJ15uMQpzHA4Idg8BhKUw3ubxszClcmp_9PkVlMMAR4lfyoRu80iZ5W0Q_vmSkBGulcRo0k4aBjsUbaL71SqwtYJnWnw",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"url": "http://127.0.0.1:5555/user/logout",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtMHl5aUdRc0w4THRURmhoTFBTaFNEeUM4WkM1dUVObXRKanZSVHpUVnNrIn0.eyJqdGkiOiIwNTVkMWRkNS0zNzQ4LTRjYjQtOWY1Ny0yODQzNjlkMWI1ZTYiLCJleHAiOjE0OTc0Mjc1MjMsIm5iZiI6MCwiaWF0IjoxNDk3NDI2MDIzLCJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwODAvYXV0aC9yZWFsbXMvZGVtbyIsImF1ZCI6InNlcnZpY2UiLCJzdWIiOiJjYzJiODFkMi1lNDUwLTQ2ZmEtOGNmOC05ODY1NGRlM2ZkNTciLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJzZXJ2aWNlIiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiNGM3ZDc5NDgtNDFmNi00ZTBkLWE3OTYtOTdmMDAxNGJjOTZlIiwiYWNyIjoiMSIsImNsaWVudF9zZXNzaW9uIjoiOTFmMWMzYWEtMGVkMi00M2RkLTk5ZmUtZGVhYmU1Y2NhNzI2IiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sIm5hbWUiOiJha3NoYXkgZ3VwdGEgIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWtzaGF5MTl2aXRAZ21haWwuY29tIiwiZ2l2ZW5fbmFtZSI6ImFrc2hheSBndXB0YSIsImVtYWlsIjoiYWtzaGF5MTl2aXRAZ21haWwuY29tIn0.Y1ISvA-SkSRx3DALozf7BCnrH7q2Ciwi3XmRj6bKUn-vX2bthLmnKsa7fJSz8AK2zZQ5zlzYBnKjIyYkmy-q6puYCKxe_sF0UIxqa-B6boZqzq9fGnPRQQ4Wl2zkgmdN35F_8zy6S5IejJw9pf5OhIaEQYOvoqhMeBSrL53tSVRGWrPlLxKDt4YKnkJq2lDlKApfoBn1z5SYfYSWOWntUB6Wb7V3NLzgCAmRfWoGxX_bOo7iAV_b5ud7O4JvnntTvdbZQYIzzN27SQblZWjeFmrbHeC658avrFDaPj09UteMzSRXyjlO1FAGdt4xiSa9_AK5Fimax7jVLl9l38thzA",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "RefreshToken",
+			"request": {
+				"url": "http://127.0.0.1:5555/keycloak/refreshtoken",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtMHl5aUdRc0w4THRURmhoTFBTaFNEeUM4WkM1dUVObXRKanZSVHpUVnNrIn0.eyJqdGkiOiI4N2Q4ZjExOC03MDA3LTQ0ODUtYTY0Yi1hZDkyN2EwYzZjZTkiLCJleHAiOjE0OTc0Mjc4MjMsIm5iZiI6MCwiaWF0IjoxNDk3NDI2MDIzLCJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwODAvYXV0aC9yZWFsbXMvZGVtbyIsImF1ZCI6InNlcnZpY2UiLCJzdWIiOiJjYzJiODFkMi1lNDUwLTQ2ZmEtOGNmOC05ODY1NGRlM2ZkNTciLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoic2VydmljZSIsImF1dGhfdGltZSI6MCwic2Vzc2lvbl9zdGF0ZSI6IjRjN2Q3OTQ4LTQxZjYtNGUwZC1hNzk2LTk3ZjAwMTRiYzk2ZSIsImNsaWVudF9zZXNzaW9uIjoiOTFmMWMzYWEtMGVkMi00M2RkLTk5ZmUtZGVhYmU1Y2NhNzI2IiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVtYV9hdXRob3JpemF0aW9uIiwidXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX19.k-mmJ2xYf62kQ3d9eKOZySN-NzIua_Xyxe7K9ri8Pi4nxAfjEG-OBstauuHvv4PWWmqA_rbpJgiwXBp3tWNrNWowv9twAINS40l8ItCQtd_JOIG9czWUJkt0LCpwgbhOtwiwnLjd0DBw2iqMd_scbajWVKxiFN8vWh45ViP6YfBN8RwQ2ZMqmcGS2pxDDRnabHl3XH_XwnRCn_yDZa12eDDP9CjHHyMeKpBIB9iPT33wj0YrYOtcJ1zuMvQdyhmYkghyeXDgwmVhbvSDttO6DWmV9v3hAmk8QPeLNUxMBlPJJeJQMdilzaby2elxPiy1jpXdePc0X4nTzY8-Qoua5w",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"url": "http://localhost:5555/keycloak/create",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userName\": \"test1\",\n  \"password\": \"password\",\n  \"emailAddress\": \"test1@gmail.com\",\n  \"firstName\": \"Jhon\",\n  \"lastName\": \"Cena\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
