@@ -39,4 +39,4 @@ mvn spring-boot:run
 * Now by call "/keycloak/token" with user credentials. Server validate it and give response with access_token and refresh_token. 
 * Use access token to access "user/hello" pass it in header as Authorization: bearer <access_token>
 * I am attaching postman json file also.
- 
+ ///test
